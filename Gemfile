@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'haml'
 gem 'paperclip', '~> 4.2.1'
 gem 'simple_form', '~> 3.1.0'
 gem 'slim'

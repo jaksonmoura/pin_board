@@ -1,13 +1,47 @@
 // Place all the styles related to the Pins controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#pin{
+
+// Index View
+
+#pins{
+  margin: 0 auto;
+  width: 100%;
+  .box{
+    margin: 10px;
+    width: 350px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+    border-radius: 7px;
+    text-align: center;
+    img{
+      max-width: 100%;
+      height: auto;
+    }
+
+    h2 a{
+      padding: 0;
+      font-size: 25px;
+      font-weight: 300;
+      color: #474747;
+      text-decoration: none;
+    }
+  }
+}
+
+
+// Show View
+#pin_show{
   float: left;
-  margin: 20px 0;
+  margin: 20px auto;
+  width: 100%;
 
   #pin_image{
     min-width: 100%;
     width: 100%;
     margin: 0 auto;
+  }
+
+  .glyphicon{
+    margin-right: 10px;
   }
 }

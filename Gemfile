@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'haml'
+gem 'masonry-rails', '~> 0.2.4'
 gem 'paperclip', '~> 4.2.1'
 gem 'simple_form', '~> 3.1.0'
 gem 'slim'

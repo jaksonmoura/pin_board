@@ -1,0 +1,33 @@
+doctype html
+html
+  head
+    title PinBoard
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body
+    header
+      .nav.navbar.navbar-default
+        .container
+          .navbar-header
+            .nav.navbar-brand
+              = link_to 'PinBoard', root_path
+            button.navbar-toggle.collapsed data-toggle='collapse' data-target='#header_menu'
+              span.sr-only
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+          .collapse.navbar-collapse#header_menu
+            ul.nav.navbar-nav.navbar-right
+              - if user_signed_in?
+                li = link_to 'New pin', new_pin_path
+                li = link_to 'Sign out', destroy_user_session_path, method: :delete
+              - else
+                li = link_to 'Sign in', new_user_session_path
+                li = link_to 'Sign up', new_user_registration_path
+
+    .container
+      .content
+        - flash.each do |name, msg|
+          = content_tag :div, msg, class: 'alert alert-info'
+        == yield

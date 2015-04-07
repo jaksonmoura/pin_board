@@ -1,0 +1,10 @@
+h2
+  = @pin.title
+  br/
+  small
+    = @pin.description
+
+.btn-group
+  .btn.btn-default= link_to 'Show', @pin
+  .btn.btn-default= link_to 'Edit', edit_pin_path(@pin)
+  .btn.btn-default= link_to 'Destroy', @pin, data: {:confirm => 'Are you sure?'}, :method => :delete

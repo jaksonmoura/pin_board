@@ -1,12 +1,9 @@
 h1 Listing pins
-
-- @pins.each_slice(3) do |pins|
-  .row
-    - pins.each do |pin|
-      .col-md-4
-        .pin
-          h3
-            = link_to pin.title, pin
-            br/
-            small
-              = pin.description
+- @pins.each do |pin|
+  .col-md-4
+    .pin
+      h3
+        = link_to pin.title, pin
+        br/
+        small
+          = pin.description
